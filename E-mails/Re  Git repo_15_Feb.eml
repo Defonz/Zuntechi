@@ -1,0 +1,114 @@
+Return-Path: <ryan@nmi.uk.com>
+Received: from tegid.bangor.ac.uk (tegid [147.143.161.203])
+	by hysterix.bangor.ac.uk (8.12.10+Sun/8.13.8) with ESMTP id q1FEso7p002100
+	for <eeuc24@hysterix.bangor.ac.uk>; Wed, 15 Feb 2012 14:54:57 GMT
+Received: from mail-we0-f176.google.com (mail-we0-f176.google.com [74.125.82.176])
+	by tegid.bangor.ac.uk (8.13.8/8.13.8) with ESMTP id q1FEsYvI029982
+	for <eeuc24@bangor.ac.uk>; Wed, 15 Feb 2012 14:54:37 GMT
+Received: by werf1 with SMTP id f1so957519wer.35
+        for <eeuc24@bangor.ac.uk>; Wed, 15 Feb 2012 06:54:34 -0800 (PST)
+Received: by 10.180.24.202 with SMTP id w10mr35873033wif.9.1329317279862;
+        Wed, 15 Feb 2012 06:47:59 -0800 (PST)
+Received: from ryan-imac.nmi.uk.com ([217.9.195.250])
+        by mx.google.com with ESMTPS id da8sm33939267wib.6.2012.02.15.06.47.59
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Wed, 15 Feb 2012 06:47:59 -0800 (PST)
+Subject: Re: Git repo
+Mime-Version: 1.0 (Apple Message framework v1251.1)
+Content-Type: text/plain; charset=iso-8859-1
+From: Ryan Brooks <ryan@nmi.uk.com>
+In-Reply-To: <4F3BBDD7.3010403@bangor.ac.uk>
+Date: Wed, 15 Feb 2012 14:47:58 +0000
+Cc: Liam Kurmos <l.kurmos@softwarealliancewales.com>
+Message-Id: <6B469797-41B7-43A1-B3E6-97694FE405A0@nmi.uk.com>
+References: <0B782480-1855-4752-BA9C-D3B500B644C9@nmi.uk.com> <4F3BBDD7.3010403@bangor.ac.uk>
+To: "Ebowoicho E. Onah" <eeuc24@bangor.ac.uk>
+X-Mailer: Apple Mail (2.1251.1)
+X-Gm-Message-State: ALoCoQnnkbXeVmVYTesQHE3DSAiINW9YEY1nLM/raKQ3YVLmyL9+Evmc9BhDlJRhtVPEXny9qrzQ
+X-MailScanner-ID: q1FEsYvI029982
+X-BU-MailScanner: Found to be clean, Found to be clean
+X-BU-MailScanner-SpamCheck: nid sbam/not spam, SpamAssassin (not cached,
+	sgor/score=0.077, yn ofynnol/required 4.5, autolearn=disabled,
+	TW_BW 0.08), nid sbam/not spam (goddefadwy/whitelisted)
+MailScanner-NULL-Check: 1329922477.53766@QcOvEHVX9Vj3s6G1hRvTcA
+X-Spam-Status: No
+X-BU-MailScanner-Information: Please contact the ISP for more information
+X-BU-MailScanner-From: ryan@nmi.uk.com
+Content-Transfer-Encoding: 8bit
+X-MIME-Autoconverted: from quoted-printable to 8bit by hysterix.bangor.ac.uk id q1FEso7p002100
+
+Hi Emmanuel,
+
+Everything you need is checked in to the project hosted on https://github.com/spikeheap/jstopo. There is a wiki there (https://github.com/spikeheap/jstopo/wiki) where I've added some notes to help you along and provide a spec.
+
+I haven't set up a server, because it's quite easy to run it locally. There's a page on the wiki which explains briefly, but you will need to download and install XAMPP. Once you've got that you can put the sample JSON from git into the 'www' folder alongside the Javascript/HTML you'll be writing and you're ready to go.
+
+To use Git, you'll need to download and install the git client for windows (tortoisegit is a good choice) so you can clone the repository. In the meantime, you can download the JSON files directly from github.
+
+It's good to hear you're working on it today, and I'm interested as to where you're up to. Which Javascript libraries have you looked into and which seem most appropriate? Do you have a design document or ideas on how the code will be structured, and which use-cases you will solve first? You'll need to test your code too, so have you looked at unit testing for Javascript and if it's possible?
+
+There's a wealth of information on the internet about using Git, so I'll let you start there, but the basic principle is that you clone a repository so you have a local copy, which you can edit and push back to the server. Let me know specific problems you've got and I can answer those much more easily than giving instructions for the whole system.
+
+Once you're up and running with it, I'd recommend putting your design documents and other things related to the project on Github, so we can all get to them.
+
+Many thanks
+
+Ryan
+
+
+On 15 Feb 2012, at 14:14, Ebowoicho E. Onah wrote:
+
+> Hi Ryan,
+> 
+> We were doing some work today on the project and we would need some help connecting to the server.  We were wondering if you have set up the server yet? And we would also need some instructions on how to use the GitHub?
+> 
+> Cheers
+> 
+> Emmanuel
+> 
+> 
+> On 07/02/2012 21:54, Ryan Brooks wrote:
+>> Hi Emmanuel,
+>> 
+>> Sorry for the confusion last night. HopefHiully that email I sent through Liam made sense and helps. Let me know if you've got any questions about getting set up with Git or using the GitHub repository.
+>> 
+>> If you have any problems we could always meet on Thursday after 5pm?
+>> 
+>> Cheers
+>> 
+>> Ryan
+> 
+> 
+> -- 
+> Rhif Elusen Gofrestredig / Registered Charity No. 1141565
+> 
+> Gall y neges e-bost hon, ac unrhyw atodiadau a anfonwyd gyda hi,
+> gynnwys deunydd cyfrinachol ac wedi eu bwriadu i'w defnyddio'n unig
+> gan y sawl y cawsant eu cyfeirio ato (atynt). Os ydych wedi derbyn y
+> neges e-bost hon trwy gamgymeriad, rhowch wybod i'r anfonwr ar
+> unwaith a dilëwch y neges. Os na fwriadwyd anfon y neges atoch chi,
+> rhaid i chi beidio â defnyddio, cadw neu ddatgelu unrhyw wybodaeth a
+> gynhwysir ynddi. Mae unrhyw farn neu safbwynt yn eiddo i'r sawl a'i
+> hanfonodd yn unig  ac nid yw o anghenraid yn cynrychioli barn
+> Prifysgol Bangor. Nid yw Prifysgol Bangor yn gwarantu
+> bod y neges e-bost hon neu unrhyw atodiadau yn rhydd rhag firysau neu
+> 100% yn ddiogel. Oni bai fod hyn wedi ei ddatgan yn uniongyrchol yn
+> nhestun yr e-bost, nid bwriad y neges e-bost hon yw ffurfio contract
+> rhwymol - mae rhestr o lofnodwyr awdurdodedig ar gael o Swyddfa
+> Cyllid Prifysgol Bangor.  www.bangor.ac.uk
+> 
+> This email and any attachments may contain confidential material and
+> is solely for the use of the intended recipient(s).  If you have
+> received this email in error, please notify the sender immediately
+> and delete this email.  If you are not the intended recipient(s), you
+> must not use, retain or disclose any information contained in this
+> email.  Any views or opinions are solely those of the sender and do
+> not necessarily represent those of Bangor University.
+> Bangor University does not guarantee that this email or
+> any attachments are free from viruses or 100% secure.  Unless
+> expressly stated in the body of the text of the email, this email is
+> not intended to form a binding contract - a list of authorised
+> signatories is available from the Bangor University Finance
+> Office.  www.bangor.ac.uk
+> 
+

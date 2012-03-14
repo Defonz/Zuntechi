@@ -1,0 +1,129 @@
+Return-Path: <ryan@nmi.uk.com>
+Received: from padarn.bangor.ac.uk (padarn [147.143.2.18])
+	by hysterix.bangor.ac.uk (8.12.10+Sun/8.13.8) with ESMTP id q1REvmUY010076
+	for <eeuc24@hysterix.bangor.ac.uk>; Mon, 27 Feb 2012 14:57:49 GMT
+Received: from mail-we0-f176.google.com (mail-we0-f176.google.com [74.125.82.176])
+	by padarn.bangor.ac.uk (8.13.8/8.13.8) with ESMTP id q1REvYbH004518
+	for <eeuc24@bangor.ac.uk>; Mon, 27 Feb 2012 14:57:35 GMT
+Received: by werc1 with SMTP id c1so1675694wer.35
+        for <eeuc24@bangor.ac.uk>; Mon, 27 Feb 2012 06:57:34 -0800 (PST)
+Received-SPF: pass (google.com: domain of ryan@nmi.uk.com designates 10.216.136.68 as permitted sender) client-ip=10.216.136.68;
+Authentication-Results: mr.google.com; spf=pass (google.com: domain of ryan@nmi.uk.com designates 10.216.136.68 as permitted sender) smtp.mail=ryan@nmi.uk.com
+Received: from mr.google.com ([10.216.136.68])
+        by 10.216.136.68 with SMTP id v46mr7299140wei.31.1330354654498 (num_hops = 1);
+        Mon, 27 Feb 2012 06:57:34 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=gamma;
+        h=content-type:mime-version:subject:from:in-reply-to:date
+         :content-transfer-encoding:message-id:references:to:x-mailer
+         :x-gm-message-state;
+        bh=0mfdpbU5g/V2WeZOz2FL0TVzNV9YvI4/nYNztzS7tz4=;
+        b=EKnueQ0W7rPnvigoEEKoKCF4h3bRU+34ai3PCTQOIE3MV+F3HtmFHqQvjTHaN38s6/
+         3vufNFEsoE6nNqgCwU51KljlrFo49xv7Hh/jDLy7qMYLzVcqmtRuzh/T5b5y/ZHtgsCV
+         i6G7khT6yGODia+E+B4vTeqTIQIkJCg5dJj5w=
+Received: by 10.216.136.68 with SMTP id v46mr5819546wei.31.1330354654411;
+        Mon, 27 Feb 2012 06:57:34 -0800 (PST)
+Received: from ryan-imac.nmi.uk.com ([217.9.195.250])
+        by mx.google.com with ESMTPS id h19sm22354358wiw.9.2012.02.27.06.57.33
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Mon, 27 Feb 2012 06:57:33 -0800 (PST)
+Content-Type: text/plain; charset=iso-8859-1
+Mime-Version: 1.0 (Apple Message framework v1257)
+Subject: Re: TOPO Editor (Software Hut Group)
+From: Ryan Brooks <ryan@nmi.uk.com>
+In-Reply-To: <20120220155617.1504433uhtzni1wh@webmail.bangor.ac.uk>
+Date: Mon, 27 Feb 2012 14:57:33 +0000
+Message-Id: <5DF5616B-1837-4812-A544-CB0A83C807CA@nmi.uk.com>
+References: <20120220155617.1504433uhtzni1wh@webmail.bangor.ac.uk>
+To: eeuc24@bangor.ac.uk
+X-Mailer: Apple Mail (2.1257)
+X-Gm-Message-State: ALoCoQm4Je1LvWJKmA+Ror/x+nOK1ewbFWEQsV3jQa/CWOL9QEHUpXbPS66al0FvMpzvjN9bPaUr
+X-MailScanner-ID: q1REvYbH004518
+X-BU-MailScanner: Found to be clean, Found to be clean
+X-BU-MailScanner-SpamCheck: nid sbam/not spam, SpamAssassin (not cached,
+	sgor/score=0.353, yn ofynnol/required 4.5, autolearn=disabled,
+	MAILTO_TO_SPAM_ADDR 0.28, TW_BW 0.08), nid sbam/not spam (goddefadwy/whitelisted)
+MailScanner-NULL-Check: 1330959456.17494@6dIjMwH0Fu0CtvA347tjLQ
+X-Spam-Status: No
+X-BU-MailScanner-Information: Please contact the ISP for more information
+X-BU-MailScanner-From: ryan@nmi.uk.com
+Content-Transfer-Encoding: 8bit
+X-MIME-Autoconverted: from quoted-printable to 8bit by hysterix.bangor.ac.uk id q1REvmUY010076
+
+Hi Emmanuel,
+
+Apologies for the delay in my reply. I've been off skiing for the past week and am just catching up with my emails now.
+
+I've added some comments in-line below:
+
+On 20 Feb 2012, at 15:56, eeuc24@bangor.ac.uk wrote:
+
+> Dear Ryan
+> 
+> After today's meeting with Steve we have come up with a few points that we wanted to discuss.
+> 
+> - Are you wanting to start the database from scratch or have you already got an image library from which users can then build up on?
+We have a few images to get us started, and aim to collect more through the spring. The database is abstracted away from the page, but can be modified if you need extra fields or want data stored differently to make life easier. As far as the page is concerned the 'database' is just the JSON data, and I have implemented portions of the JSON provider in Groovy and Grails.
+> 
+> - We have came up with a basic layout for the web-page and we wanted to have your feedback on this as we recall you saying how important the usability 	of it was. (document attached)
+That layout looks good. Ultimately we want to keep it quite minimalist, but as a first pass it's nice to have all the information to hand. When you're designing it I would make as much as you can modular, so we could (for example), remove the Country, County, Area, Range and Crag search elements if the user wants a bigger image. It's a good design if you can add and remove these individual components and the page still works.
+> 
+> - We have also looked into the possible libraries we might use and we have come up with a list:
+> 	- jQuery
+> 	- OpenLayer (image layering)
+> 	- Gallerie (image display)
+> Do these seem suitable or did you have any other libraries you would like us to implement.
+jQuery is a good choice, and is pretty much the industry standard for Javascript now. I don't know much about Gallerie, but if it works then great. I couldn't find anything about OpenLayer, did you mean OpenLayers, the open source mapping library? 
+> 
+> At this point we are hoping to have a basic working prototype for next week's session. We are also starting to write up the use-case documentation and identify the possible testing strategies. If we could meet up at some point next week after we have had our feedback on Monday that would be great, as we would like to have feedback from you too.
+I am not able to make it in this afternoon unfortunately, but I am free every day from 4pm for the rest of the week, so pick a time and place and I'll meet you then.
+
+Again, sorry for not being in touch last week, but it looks like you're making good progress.
+
+Cheers
+
+Ryan
+
+> 
+> Thanks
+> 
+> Emmanuel
+> 
+> ----------------------------------------------------------------
+> This message was sent using IMP, the Internet Messaging Program.
+> 
+> 
+> -- 
+> Rhif Elusen Gofrestredig / Registered Charity No. 1141565
+> 
+> Gall y neges e-bost hon, ac unrhyw atodiadau a anfonwyd gyda hi,
+> gynnwys deunydd cyfrinachol ac wedi eu bwriadu i'w defnyddio'n unig
+> gan y sawl y cawsant eu cyfeirio ato (atynt). Os ydych wedi derbyn y
+> neges e-bost hon trwy gamgymeriad, rhowch wybod i'r anfonwr ar
+> unwaith a dilëwch y neges. Os na fwriadwyd anfon y neges atoch chi,
+> rhaid i chi beidio â defnyddio, cadw neu ddatgelu unrhyw wybodaeth a
+> gynhwysir ynddi. Mae unrhyw farn neu safbwynt yn eiddo i'r sawl a'i
+> hanfonodd yn unig  ac nid yw o anghenraid yn cynrychioli barn
+> Prifysgol Bangor. Nid yw Prifysgol Bangor yn gwarantu
+> bod y neges e-bost hon neu unrhyw atodiadau yn rhydd rhag firysau neu
+> 100% yn ddiogel. Oni bai fod hyn wedi ei ddatgan yn uniongyrchol yn
+> nhestun yr e-bost, nid bwriad y neges e-bost hon yw ffurfio contract
+> rhwymol - mae rhestr o lofnodwyr awdurdodedig ar gael o Swyddfa
+> Cyllid Prifysgol Bangor.  www.bangor.ac.uk
+> 
+> This email and any attachments may contain confidential material and
+> is solely for the use of the intended recipient(s).  If you have
+> received this email in error, please notify the sender immediately
+> and delete this email.  If you are not the intended recipient(s), you
+> must not use, retain or disclose any information contained in this
+> email.  Any views or opinions are solely those of the sender and do
+> not necessarily represent those of Bangor University.
+> Bangor University does not guarantee that this email or
+> any attachments are free from viruses or 100% secure.  Unless
+> expressly stated in the body of the text of the email, this email is
+> not intended to form a binding contract - a list of authorised
+> signatories is available from the Bangor University Finance
+> Office.  www.bangor.ac.uk
+> 
+> <Search Page.jpg><Drop Down Menu.jpg>
+

@@ -1,0 +1,43 @@
+Return-Path: <ryan@nmi.uk.com>
+Received: from tegid.bangor.ac.uk (tegid [147.143.161.203])
+	by hysterix.bangor.ac.uk (8.12.10+Sun/8.13.8) with ESMTP id q17Mnek1016073
+	for <eeuc24@hysterix.bangor.ac.uk>; Tue, 7 Feb 2012 22:49:40 GMT
+Received: from mail-we0-f176.google.com (mail-we0-f176.google.com [74.125.82.176])
+	by tegid.bangor.ac.uk (8.13.8/8.13.8) with ESMTP id q17Mn8MV015741
+	for <eeuc24@bangor.ac.uk>; Tue, 7 Feb 2012 22:49:30 GMT
+Received: by werf1 with SMTP id f1so7821026wer.35
+        for <eeuc24@bangor.ac.uk>; Tue, 07 Feb 2012 14:49:07 -0800 (PST)
+Received: by 10.216.139.165 with SMTP id c37mr4230028wej.53.1328651681490;
+        Tue, 07 Feb 2012 13:54:41 -0800 (PST)
+Received: from [192.168.0.10] (5adeb232.bb.sky.com. [90.222.178.50])
+        by mx.google.com with ESMTPS id n5sm60526423wiw.7.2012.02.07.13.54.39
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Tue, 07 Feb 2012 13:54:40 -0800 (PST)
+From: Ryan Brooks <ryan@nmi.uk.com>
+Content-Type: text/plain; charset=us-ascii
+Subject: Git repo
+Date: Tue, 7 Feb 2012 21:54:43 +0000
+Message-Id: <0B782480-1855-4752-BA9C-D3B500B644C9@nmi.uk.com>
+To: eeuc24@bangor.ac.uk
+Mime-Version: 1.0 (Apple Message framework v1251.1)
+X-Mailer: Apple Mail (2.1251.1)
+X-MailScanner-ID: q17Mn8MV015741
+X-BU-MailScanner: Found to be clean, Found to be clean
+X-BU-MailScanner-SpamCheck: nid sbam/not spam, SpamAssassin (not cached,
+	sgor/score=0, yn ofynnol/required 4.5, autolearn=disabled), nid sbam/not spam (goddefadwy/whitelisted)
+MailScanner-NULL-Check: 1329259770.4691@h6EFRAFzw3kgsxNI93FiFQ
+X-Spam-Status: No
+X-BU-MailScanner-Information: Please contact the ISP for more information
+X-BU-MailScanner-From: ryan@nmi.uk.com
+Content-Transfer-Encoding: 8bit
+X-MIME-Autoconverted: from quoted-printable to 8bit by hysterix.bangor.ac.uk id q17Mnek1016073
+
+Hi Emmanuel, 
+
+Sorry for the confusion last night. Hopefully that email I sent through Liam made sense and helps. Let me know if you've got any questions about getting set up with Git or using the GitHub repository. 
+
+If you have any problems we could always meet on Thursday after 5pm?
+
+Cheers
+
+Ryan
