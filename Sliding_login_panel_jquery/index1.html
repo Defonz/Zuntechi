@@ -1,0 +1,195 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zuntechi Editor</title>
+<script type="text/javascript">
+   function checkName(form)
+ {
+   var eobj1=document.getElementById('realnameerror');
+   eobj1.innerHTML='';
+   var sRealName = form.realname.value;
+    var oRE = /^[a-z0-9]+[_.-]?[a-z0-9]+$/i;
+    var isCorrectFormat = oRE.test(sRealName);
+    var error=false;
+    if (!isCorrectFormat)
+    {
+        error="Incorrect format.";
+        form.realname.select();
+        form.realname.focus();
+    }
+
+    else if (sRealName == '')
+    {
+        error='Error: Username cannot be blank!';
+        form.realname.focus();
+    }
+    else if (sRealName.length < 4)
+    {
+        error="UserName should be atleast 4 characters long";
+    }
+    if (error)
+	{
+     eobj1.innerHTML=error;
+     return false;
+    }
+    return true;
+ }
+
+    function checkEmail(form)   /* for email validation */
+	{
+		var eobj2=document.getElementById('emailerror');
+        eobj2.innerHTML='';
+        var error=false;
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.email.value))
+        {
+            return true;
+        }
+		else 
+         error='Invalid E-mail Address! Please re-enter';
+		 eobj2.innerHTML=error;
+         return false;
+    }
+
+    function validatePwd(form)       /* password & retype-password verification */
+    {
+        var eobj3=document.getElementById('passworderror');
+        eobj3.innerHTML='';
+		var error=false;
+		var invalid = ' ';
+        minLength = 6;
+        var pw1 = form.password.value;
+        var pw2 = form.password2.value;
+
+         if (pw1 == '' || pw2 == '')
+        {
+            error='Please enter your password twice.';
+            return false;
+        }
+
+        if (form.password.value.length < minLength)
+        {
+            error='Your password must be at least ' + minLength + ' characters long. Try again.';
+            return false;
+        }
+
+        if (document.form.password.value.indexOf(invalid) > -1)
+        {
+            error='Sorry, spaces are not allowed.';
+            return false;
+        }
+        else
+        {
+            if (pw1 != pw2)
+            {
+                error='You did not enter the same new password twice. Please re-enter your password.';
+                return false;
+               }
+            else
+             {
+                error='Passwords Match.';
+                   return true;
+             }
+
+            return false;
+        }
+    }
+
+    function validPhone(form)          /* phone no validation */
+    {
+        var eobj4=document.getElementById('phonenoerror');
+        eobj4.innerHTML='';
+		var valid = '0123456789';
+        phone = form.phoneno.value;
+
+        if (phone == '')
+        {
+            error:'This field is required. Please enter phone number';
+            return false;
+        }
+
+        if (!phone.length > 1 || phone.length < 10)
+        {
+            error:'Invalid phone number length! Please try again.';
+            return false;
+        }
+
+        for (var i = 0; i < phone.length; i++)
+        {
+            temp = '' + phone.substring(i, i + 1);
+
+            if (valid.indexOf(temp) == -1)
+            {
+                error='Invalid characters in your phone. Please try again.';
+                return false;
+            }
+        }
+		if (error)
+		{
+           eobj4.innerHTML=error;
+           return false;
+	    }
+        return true;
+    }
+
+    function validate() {
+        var form = document.forms['form'];
+
+        if (!checkName(form) || !checkEmail(form) || !validatePwd(form) || !validPhone(form))
+        {
+            return false;
+        }
+
+        return true;
+    }
+</script>
+</head>
+<body>
+
+<form action="" method="post" name="form" onsubmit="return validate()">
+    User Name : <input type="text" name="realname" size="19"/><span id="realnameerror" ></span>
+    <br>
+    E-Mail    : <input type="text" name="email" size="25"/><span id="emailerror "></span>
+    <br>
+    Password  : <input type="password" name="password" maxlength="12" size="25"/><span id="passworderror "></span>
+    <br>
+    Retype password: <input type="password" name="password2" maxlength="12" size="25"/><span id="repassworderror"></span>
+    <br>
+    <input type="submit" value="I'm done" class="btn"/>
+</form>
+<div class="connect-buttons">
+    <hr />
+    <form class="connect-button" name="login" method="post" action="/social/twitter/redirect/" id="twitter-connect-form">
+    <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='b137a30fbb34edf8f1e011f117251494' /></div>
+    
+    <a href="#" onclick="$('#twitter-connect-form').submit(); return false;" class="btn" id="twitter_button"><span>Sign up with <strong>Twitter</strong></span></a>
+    </form>
+    
+    <form class="connect-button" name="login" method="post" action="/social/facebook/redirect/" id="facebook-connect-form">
+    <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='b137a30fbb34edf8f1e011f117251494' /></div>
+    
+    <a href="#" onclick="$('#facebook-connect-form').submit(); return false;" class="btn" id="facebook_button"><span>Sign up with <strong>Facebook</strong></span></a>
+    </form>
+    <div class="social-permission"><small>We won't ever post updates without your action</small></div>
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17714404-3']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
+
+    
+    _gaq.push(['_setCustomVar', 1, 'Logged in', 'false', 2]);
+    _gaq.push(['_setCustomVar', 2, 'Member', 'false', 1]);
+    _gaq.push(['_setCustomVar', 4, 'Join month', '0', 1]);
+    _gaq.push(['_setCustomVar', 5, 'Join year', '0', 1]);
+    
+    
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+</html>
